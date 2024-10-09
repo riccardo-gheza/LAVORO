@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fd;
+    margin: 0;
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+    background: #293447;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+
+.game-details {
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between; /* elementi distribuiti lungo l'asse principale */
+}
+
+.play-board {
+    height: calc(100% - 40px);    /* altezza pari al 100% del contenitore - 40px */
+    width: 100%;
+    display: grid;
+    background: #212837;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    position: relative;
+}
+
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.buttons-container button {
+    margin: 5px;
+    background: lightyellow;
+    border-radius: 10px;
+    border: 2px solid blue;
+    outline: none;
+    padding: 6px;
+    font-weight: bold;
+    color: black;
+}
+
+.buttons-container button:focus {
+    background: silver;
+}
+
+
+.play-board .food {
+    background: #ff003d;
+}
+
+.play-board .head {
+    background: #60cbff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #293447;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.controls i {
+    font-size: 1.5rem;
+    color: #b8c6dc;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
+    .game-details {
+        font-size: 1rem; 
+        padding: 10px;
+    }
+
+    .controls {
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .controls i {
+        padding: 10px;
+        font-size: 1.5rem; 
+        width: auto; 
+        border-bottom: 1px solid #171b26;
+    }
+
+    .play-board {
+        grid-template: repeat(5, 1fr) / repeat(5, 1fr); 
+        min-height: 200px; 
+    }
+
+    .play-board .head {
+        background: #60cbff;
+        width: 20px;  
+        height: 20px; 
+    }
+
+    .play-board .food {
+        background: #ff003d;
+        width: 20px;  
+        height: 20px; 
+    }
+    
+    .buttons-container button {
+        font-size: 0.6rem; 
+        margin: 2px;
+    }
+}
+
+.move-right {
+    margin-left: 100px;
+}
+
+button {
+    background: lightyellow;
+    border-radius: 10px;
+    border: 2px solid blue;
+    outline: none;
+    padding: 6px;
+    font-weight: bold;
+    color: black;
+}
+
+button:focus {
+    background: silver;
+}
